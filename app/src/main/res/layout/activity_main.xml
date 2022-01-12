@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/teal_200"
+            android:gravity=""
+            android:padding="20dp"
+            android:text="복리후생비"
+            android:textColor="#F4F7FD"
+            android:textSize="20sp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_title"
+            android:fillViewport="true">
+
+            <com.rorpheeyah.tableview.TableView
+                android:id="@+id/tbv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:cellBackground="#F5F5F5"
+                app:cellPadding="11dp"
+                app:cellSelectedColor="#A3E4DB"
+                app:cellTextColor="#3e4449"
+                app:defaultEmptyCell="N\A"
+                app:headerBackground="#D6E5FA"
+                app:headerPadding="11dp"
+                app:headerTextColor="#3e4449"
+                app:headerTextGravity="start"
+                app:cellTextGravity="start"
+                app:isStretch="true"
+                app:itemPreviewCount="10" />
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>
